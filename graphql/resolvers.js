@@ -33,7 +33,7 @@ module.exports = {
     async country(_, { countryName }) {
       try {
         const res = await axios.get(
-          `https://restcountries.eu/rest/v2/name/${countryName}`
+          `https://restcountries.eu/rest/v2/name/${countryName}?fullText=true`
         );
         return res.data;
       } catch (error) {
